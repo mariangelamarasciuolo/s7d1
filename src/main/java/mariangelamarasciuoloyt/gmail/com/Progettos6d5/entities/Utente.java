@@ -9,9 +9,6 @@ import lombok.Setter;
 @Entity
 @Table(name = "utenti")
 public class Utente {
-    //@OneToMany(mappedBy = "utente")
-    //@JsonIgnore
-    //List<Dispositivo> dispositivoList;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,4 +18,5 @@ public class Utente {
     private String surname;
     private String email;
     private String avatar;
+    private String password;
 }

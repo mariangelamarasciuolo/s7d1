@@ -75,5 +75,9 @@ public class UtenteService {
         return utenteRepository.save(found);
     }
 
+    public Utente findByEmail(String email) {
+        return utenteRepository.findByEmail(email)
+                .orElseThrow(() -> new NotFoundException("Utente con email " + email + " non trovato!"));
+    }
 
 }
